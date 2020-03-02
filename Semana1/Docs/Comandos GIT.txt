@@ -1,0 +1,24 @@
+dir - listar archivos y carpetas
+cd - para navegar entre archivitos
+	cd Documentos
+	cd ..
+----------------------------------
+git init - inicializa git en una carpeta como un nuevo proyecto
+git status - es para ver el estado actual de mi proyecto
+git add nombrearchivo.txt - añadira nombrearchivo.txt al stage
+git add . - añadira todo los archivos
+git commit -m "descripción del commit" 
+git restore nombrearchivo - esto funca antes de hacerle el stage
+git config --list     - sirve para mostrar la configuración que tiene git
+git config --global user.name nombre_usuario_nuevo
+git config --global user.email email@nuevo
+git diff idcommit1 idcommit2 - me muestra las diferencias entre 2 commits
+git show nombrearchivo.html - me muestra los ultimos cambios que ha sufrido mi archivo
+git reset idcommitaregresar --hard
+git branch nombrenuevarama
+git checkout nuevarama - me cambiara a la rama indicada
+git merge ramanueva - hacer esto en la rama que va a ser mi principal usualmente la master
+git branch -d ramaaeliminar - elimina una rama
+---------------------------------------
+git remote add origin remote URLREPOSITORY
+git push origin -u master

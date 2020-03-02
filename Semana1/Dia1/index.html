@@ -1,0 +1,136 @@
+<!--Doctype me indica que mi documento est utilizando HTML en su versión 5-->
+<!DOCTYPE html>
+<!-- Va a tener una etiqueta de apertura <etiqueta> y una etiqueta de cierre </etiqueta> -->
+<html>
+    <!-- <head es el contenido que usualmente no vemos pero es importante para el navegador -->
+    <!-- Un atributo va asi: atributo = "valor_del_atributo"-->
+    <head lang="es">
+        <meta name="description" content="HTML5, Código, Web, Lentejitas, Pagina inicial de los alumnos de Código"/>
+        <meta name="keywords" content="Web, VSCode,Arequipa, Paucarpata, Tecnología"/>
+        <!-- Unicode 8, Que es la codificación -->
+        <meta charset="UTF-8"/>
+        <!-- Sirve para mostrar el título en la pestaña del navegador -->
+        <link rel="icon" type="image/png" href="./favicon.png"/>
+        <title>CodiGO, Bootcamp de Desarrollo Web</title>
+    </head>
+    <body>
+        <!-- El contenido que si es visible usualmente en mi página web -->
+        <!-- Contenedores semánticos -->
+        <header>
+            <h1>Título de mi Página Web</h1>
+            <!-- <h2>Título de mi Página Web</h2>
+            <h3>Título de mi Página Web</h3>
+            <h4>Título de mi Página Web</h4>
+            <h5>Título de mi Página Web</h5>
+            <h6>Título de mi Página Web</h6> -->
+        </header>
+        <nav>
+            <!-- unordened list, lista desordenada -->
+            <ul>
+                <!-- list -->
+                <!-- el michi o numeral, usualmente hace referencia a un ID -->
+                <li><a href="#articulo_1">Artículo 1</a></li>
+                <li><a href="#articulo_2">Artículo 2</a></li>
+                <li><a href="#articulo_3">Artículo 3</a></li>
+                <li><a href="#articulo_4">Artículo 4</a></li>
+                <li><a href="http://youtube.com" target="_blank">Youtube</a></li>
+                <li><a href="./02-imagenes.html" target="_blank">Fotos</a></li>
+                <li><a href="./03-listas.html" target="_self">Listas</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <article>
+                    <h2 id="articulo_1">Título de Articulo1</h2>
+                    <!-- párrafo -->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A provident corrupti ipsum sapiente sed quae maiores nostrum iure animi officia incidunt veritatis culpa fugiat quas perspiciatis, doloribus, accusamus atque minus!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        <!-- salto de linea -->
+                        <br/>
+                        Illum at dignissimos quaerat iure a assumenda quas sit itaque natus repellat, optio laudantium eveniet magnam quasi laborum atque consequatur suscipit quae!
+                        Cumque, laudantium dolorem? Sit distinctio quas, obcaecati adipisci sint incidunt nam cumque accusantium error. Unde labore porro maxime veritatis assumenda? Dolore tempore labore, deserunt fuga cumque facere quis hic ullam.
+                        Aspernatur <br/> exercitationem, quia laboriosam laudantium cupiditate eos, veritatis minus temporibus ullam vero itaque, autem hic nisi debitis doloremque? Eius quis, ex hic sequi impedit explicabo similique nobis mollitia cumque sint!
+                        <br/><br/>
+                        Placeat excepturi aut, autem blanditiis quod quasi rerum eius, maxime ex deserunt non doloribus beatae laboriosam corrupti minima ab tenetur sapiente delectus voluptas culpa nam. Vero quis ducimus quidem quod.
+                    </p>
+                </article>
+                <article>
+                    <h2 id="articulo_2">Título de Articulo2</h2>
+                    <!-- párrafo -->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A provident corrupti ipsum sapiente sed quae maiores nostrum iure animi officia incidunt veritatis culpa fugiat quas perspiciatis, doloribus, accusamus atque minus!
+                        <pre>
+                            la etiqueta PRE, sirve para mostrar el CodiGO
+
+                            TAL        CUAL
+                            Se escribe en  mi     HTML
+                        </pre>
+                        <code>
+                            var x = 20;
+                        </code>
+                        <time>12:19</time>
+                    </p>
+                </article>
+                <article>
+                    <h2 id="articulo_3">Título de Articulo3</h2>
+                    <!-- párrafo -->
+                    <p>
+                        Lorem ipsum dolor <span style="color: pink">Un texto random</span> sit amet consectetur adipisicing elit. A provident corrupti ipsum sapiente sed quae maiores nostrum iure animi officia incidunt veritatis culpa fugiat quas perspiciatis, doloribus, accusamus atque minus!
+                    </p>
+                </article>
+                <article>
+                    <h2 id="articulo_4">Título de Articulo4</h2>
+                    <!-- párrafo -->
+                    <p>
+                        <em>Un texto en cursiva</em>Lorem ipsum dolor sit amet consectetur adipisicing elit. A provident corrupti <strong>Esto es Importante!</strong> ipsum sapiente sed quae maiores nostrum iure animi officia incidunt veritatis culpa fugiat quas perspiciatis, doloribus, accusamus atque minus!
+                        <br/>
+                        <u>Texto Subrayado</u>
+                        <br/>
+                        <i>En cursiva, texto</i>
+                        <br/>
+                        <b>Texto en Negrita</b>
+                    </p>
+                </article>
+            </section>
+        </main>
+        <aside>
+            <h3>Mis Redes Sociales</h3>
+            <!-- ordered list, lista ordenada -->
+            <ol>
+                <li>
+                    <a href="https://facebook.com">
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com">
+                        Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com">
+                        Vimeo
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com">
+                        Instagram
+                    </a>
+                </li>
+            </ol>
+            <div>
+                <h3>Parasite</h3>
+                <img src="./assets/parasiteimg.jpg" width="300px"/>
+            </div>
+        </aside>
+        <footer>
+            <span>CodiGO - Derechos Reservados</span>
+            <span>Marzo 2020</span>
+            <mark>Texto Resaltado</mark>
+            <small>Va ser contenido informativo,pero chiquito</small>
+            <cite>[1] Garcia Marquez, El amor en los tiempos de Cólera, 1985</cite>
+            <address>Av. Los Palotes 400, Dolores, Arequipa</address>
+        </footer>
+    </body>
+</html>
