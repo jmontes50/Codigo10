@@ -3,18 +3,24 @@ cd - para navegar entre archivitos
 	cd Documentos
 	cd ..
 ----------------------------------
+//FORMA DE TRABAJO
 git init - inicializa git en una carpeta como un nuevo proyecto
 git status - es para ver el estado actual de mi proyecto
 git add nombrearchivo.txt - añadira nombrearchivo.txt al stage
 git add . - añadira todo los archivos
 git commit -m "descripción del commit" 
+//restaurar los cambios
 git restore nombrearchivo - esto funca antes de hacerle el stage
+//CAMBIAR CONFIGURACIÓN
 git config --list     - sirve para mostrar la configuración que tiene git
 git config --global user.name nombre_usuario_nuevo
 git config --global user.email email@nuevo
+//DETECTAR CAMBIOS EN LOS ARCHIVOS
 git diff idcommit1 idcommit2 - me muestra las diferencias entre 2 commits
 git show nombrearchivo.html - me muestra los ultimos cambios que ha sufrido mi archivo
+//RETORNAR A UN COMMIT ANTERIOR, a otro punto en el tiempo anterior
 git reset idcommitaregresar --hard
+//RAMAS
 git branch nombrenuevarama
 git checkout nuevarama - me cambiara a la rama indicada
 git merge ramanueva - hacer esto en la rama que va a ser mi principal usualmente la master
