@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <!-- header>h1{Formularios}+nav>ul>li*3>a{Link $} -->
+    <header>
+        <h1>Formularios</h1>
+        <nav>
+            <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h3>Elementos de los formularios</h3>
+            <article>
+                <h3>Lista de Elementos</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nro</th>
+                            <th>Nombre del elemento</th>
+                            <th>Descripcion</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>input</strong></td>
+                            <td>Es un campo de entrada que por medio de su atributo type se puede estipular que tipo de info. requerimos</td>
+                            <td><input type="text" placeholder="Ingresa tu nombre"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>textarea</strong></td>
+                            <td>Es un campo de entrada que puede terner multilinea y se define sus dimensiones mediante las propiedades cols y rows</td>
+                            <td><textarea cols="30" rows="10"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>select</strong></td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Es un elemento que contiene una lista de opciones a elegir
+                                    </li>
+                                    <li>
+                                        Cada opcion esta contenida dentro de otra etiqueta llamada <strong>option</strong>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="1">FrontEnd</option>
+                                    <option value="2">BackEnd</option>
+                                    <option value="3">Full Stack</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>button</strong></td>
+                            <td>Elemento que representa a un boton, tiene las mismas caracteristicas que un input:button pero el button tiene etiqueta de apertura y cierre</td>
+                            <td><button>Enviar</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>label</strong></td>
+                            <td>Es un elemento en el cual se recomienda poner el texto a mostrar para que la pagina sea mejor indexada y mediante su propiedad for al hacer click en el label se seleccionara su input</td>
+                            <td>
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>fieldset</strong></td>
+                            <td>Es un elemento en el cual se agrupa otros elementos</td>
+                            <td>
+                                <fieldset>
+                                    <legend>Login</legend>
+                                    <label for="correo">Correo:</label>
+                                    <input type="email" id="correo">
+                                    <label for="pass">Contraseña:</label>
+                                    <input type="password"id="pass">
+                                    <button>Ingresar</button>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><strong>legend</strong></td>
+                            <td>
+                                Representa al titulo de algunas etiquetas, por lo general va de la mano con el <b>fieldset</b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section>
+            <h2>Lista de tipos de input</h2>
+            <article>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Numero</th>
+                            <th>Tipo</th>
+                            <th>Descripcion</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody><tr>
+                        <td>1</td>
+                        <td><strong>text</strong></td>
+                        <td>Sirve para ingresar texto plano, permite el ingreso de todo tipo de caracteres</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>email</strong></td>
+                        <td>Sirve para ingresar correos electronicos pero a pesar de ser texto plano, mediante la opcion de validar el formulario se asegura que lo ingresado tenga una @ y un .</td>
+                        <td><input type="email" ></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>number</strong></td>
+                        <td>Sirve para ingresar solamente numeros enteros y decimales</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>date</strong></td>
+                        <td>Sirve para ingresar unicamente fechas, con un calendario de muestra</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>password</strong></td>
+                        <td>Sirve para ingresar las contraseñas, oculta lo ingresado por medio de simbolos</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>time</strong></td>
+                        <td>Sirve para ingresar las horas y minutos, mas no la fecha</td>
+                        <td><input type="time"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>color</strong></td>
+                        <td>Input para seleccionar un color en base a una paleta de colores</td>
+                        <td><input type="color"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><strong>checkbox</strong></td>
+                        <td>Sirve para seleccionar o deseleccionar un grupo de checkboxes, se puede seleccionar uno o varios, van de la mano de su label</td>
+                        <td>
+                            <input type="checkbox"  id="dia1">
+                            <label for="dia1">Lunes</label>
+                            <input type="checkbox"  id="dia2">
+                            <label for="dia2">Martes</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><strong>radio</strong></td>
+                        <td>Sirve para seleccion de un conjunto de opciones, solo se puede seleccionar uno a la vez mediante su propiedad name</td>
+                        <td>
+                            <!-- (input:radio+label)*2 -->
+                            <input type="radio" name="genero" id="femenino">
+                            <label for="femenino">Femenino</label>
+                            <input type="radio" name="genero" id="masculino">
+                            <label for="masculino">Masculino</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><strong>file</strong></td>
+                        <td>
+                            Sirve para subir un archivo local al servidor
+                        </td>
+                        <td>
+                            <input type="file">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><strong>reset</strong></td>
+                        <td>Sirve para limpiar todo el formulario, limpia todos los campos, tiene que ir dentro de una etiqueta form para que limpie los campos</td>
+                        <td>
+                            <form action="">
+                                <label for="correo">Ingrese su correo</label>
+                                <input type="email" id="correo">
+                                <input type="reset" value="Resetear">
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><strong>submit</strong></td>
+                        <td>Sirve para enviar todos los campos del formulario, por defecto hará que se recargue la página (Ejemplo aplicado en la fila 11)</td>
+                        <td></td>
+                    </tr></tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
