@@ -1,0 +1,71 @@
+@font-face{
+    font-family: "mi fuente";
+    src: url('VIRUS.ttf');
+}
+code {
+    color: purple;
+}
+.c-font-family{
+    font-family: "mi fuente";
+}
+.c-font-size{
+    font-size: 150%;
+    color: green;
+}
+.c-font-weight{
+    font-weight: bold;
+}
+.c-font-style{
+    font-style: italic;
+}
+.c-font{
+    font: oblique bold 20px 'Arial';
+}
+.c-text-align{
+    text-align: center;
+}
+.c-text-align-last{
+    text-align-last: right;
+}
+.c-letter-spacing{
+    letter-spacing: 20px;
+}
+.c-word-spacing{
+    word-spacing: 10px;
+}
+.c-line-height{
+    line-height: 10px;
+}
+.c-vertical-align{
+    vertical-align: text-top;
+}
+.c-rgb{
+    color: rgb(199, 80, 43);
+}
+.c-rgba{
+    color: rgba(100, 180, 50, 0.8);
+}
+.c-bordepunteado{
+    /*
+    dashed => es punteado pero lineal
+    dotted => punteado pero con puntos de separacion
+    solid => color solido
+    none => sin linea
+    */
+    border: 1px dotted #0000FF;
+}
+.c-width{
+    width: 50%;
+}
+.c-height{
+    height: 20px;
+}
+.c-overflow{
+    overflow: auto;
+}
+.c-overflow-x{
+    overflow-x: hidden;
+}
+.c-overflow-y{
+    overflow-y: hidden;
+}

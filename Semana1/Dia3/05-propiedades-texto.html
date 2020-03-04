@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./05-propiedades-texto.css">
+    <title>Propiedades del texto</title>
+</head>
+<body>
+    <main>
+        <h1>Propiedades de la fuente</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripcion</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>font-family</code>
+                    </td>
+                    <td>
+                        Definir el tipo de fuente del elemento, la prioridad se establece en el orden en el que se especifica el tipo de fuente
+                    </td>
+                    <td>
+                        <p class="c-font-family">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, alias id. Ad quidem aperiam, quis, veritatis quibusdam ab ullam quisquam quasi nisi nihil nesciunt provident fuga consequuntur exercitationem quia sit.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>font-size</code>
+                    </td>
+                    <td>Define el tamaño de la fuente, el tamaño predeterminado es 16px, los valores admitidos son %, px, rem, em</td>
+                    <td>
+                        <p style="font-size: 50%" class="c-font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda ab necessitatibus, praesentium, rem temporibus dolores quo illum omnis cupiditate saepe. Quas temporibus ipsam accusamus libero, quidem veritatis ab harum.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>font-weight</code>
+                    </td>
+                    <td>Define el ancho de la fuente del elemento, sus valores son 'normal' y 'bold'. Algunas fuentes de letras contemplan otros valores [100,200,300,...,800]</td>
+                    <td>
+                        <p class="c-font-weight">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde aut enim dolorum soluta aperiam voluptate alias rem, eveniet explicabo atque, voluptates accusamus voluptas laudantium repellendus, ipsa nisi at labore sunt?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>font-style</code>
+                    </td>
+                    <td>
+                        Define el estilo de la fuente, puede tener valores como 'normal', 'oblique', 'italic'
+                    </td>
+                    <td>
+                        <p class="c-font-style">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, eum error tenetur pariatur illo dicta magni quos est aut maxime reprehenderit ut nobis alias veniam voluptate impedit nulla explicabo optio.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>font</code>
+                    </td>
+                    <td>
+                        Combina todas las propiedades del texto font-style font-size y font-family en una misma linea. El orden para usar esta propiedad es | style | weight | size | family |
+                    </td>
+                    <td>
+                        <p class="c-font">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime deleniti a, possimus perspiciatis minima ex ut ea nostrum doloremque qui et molestias minus temporibus eaque ad enim consequuntur doloribus libero.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h1>Propiedades del texto</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripcion</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>text-align</code>
+                    </td>
+                    <td>
+                        Esta propiedad alinea el texto dentro de un elemento. Sus valores son: left, right, center, justify
+                    </td>
+                    <td>
+                        <p class="c-text-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus cupiditate vitae sed facilis sunt, exercitationem adipisci quaerat sequi ex sint laboriosam dolorum temporibus provident aspernatur consequuntur quis beatae doloribus vero!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>text-align-last</code>
+                    </td>
+                    <td>
+                        Alinea la ultima linea del parrafo. Sus valores pueden ser left, right, justify, center
+                    </td>
+                    <td>
+                        <p class="c-text-align-last">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, expedita? Error suscipit ut eius ad. Dolorem assumenda ipsam dignissimos est consequatur voluptatibus amet odio minus ad vel qui, optio sapiente!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>letter-spacing</code>
+                    </td>
+                    <td>
+                        Define el espacio entre letra y letra de un mismo parrafo, sus valores pueden ser px, %, rem, em
+                    </td>
+                    <td>
+                        <p class="c-letter-spacing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur rerum magni laudantium. Corporis quia ducimus voluptatem voluptates corrupti possimus iste quis nisi autem. Dolore, a! Quis consequatur enim laboriosam ducimus.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>word-spacing</code>
+                    </td>
+                    <td>
+                        Esta propiedad define el ancho entre las palabras. Sus valores son %, px, rem, em.
+                    </td>
+                    <td>
+                        <p class="c-word-spacing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur saepe impedit perferendis, incidunt vel, repellendus maxime explicabo illum laborum id perspiciatis tempore neque ducimus fuga ut exercitationem dolores sit corporis?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>line-height</code>
+                    </td>
+                    <td>
+                        Define el espacio entre las lineas del parrafo. Sus valores son %, px, em, rem.
+                    </td>
+                    <td>
+                        <p class="c-line-height">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis a suscipit animi earum molestiae. Eum nisi inventore maxime dolorum repudiandae maiores natus, ut quibusdam earum? Placeat minima nisi fugiat perferendis.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>vertical-align</code>
+                    </td>
+                    <td>Esta propiedad alinea los elementos verticalmente. Se usa para alinear el texto con las imagenes y sus valores pueden ser: baseline, sub, super, text-top, text-bottom, middle, top, bottom</td>
+                    <td>
+                        <p>Lorem ipsum dolor <img src="data.png" class="c-vertical-align" width="30" alt=""> sit amet consectetur adipisicing elit. Sequi accusantium possimus modi eos quia consequatur veritatis cumque officiis, laborum voluptates deleniti tempore impedit neque, explicabo ex ipsum architecto non rerum.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>Colores</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripcion</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>rgb()</code>
+                    </td>
+                    <td>Mediante la combinacion de los colores primarios RED(rojo), GREEN(verde) y BLUE(azul) podemos tener el color que deseamos combinando el grado de intensidad de cada uno de ellos, admite valores desde el 0 hasta el 255</td>
+                    <td>
+                        <p class="c-rgb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt neque molestias assumenda molestiae eligendi nesciunt vero doloremque autem voluptate? Ex eveniet distinctio odio minus quae cupiditate vitae itaque tempora veniam.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>rgba()</code>
+                    </td>
+                    <td>Este valor de colores tiene un parametro extra en relacion al rgb, que es el alfa el cual me va a indicar el grado de transparencia que le quiero dar al color, tiene valores desde el 0 al 1 siendo 1 su valor por defecto</td>
+                    <td>
+                        <p class="c-rgba">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, suscipit accusantium aperiam omnis dolorum necessitatibus cumque aspernatur architecto recusandae quam non? Placeat ea debitis ut quam illum amet dolorum magnam?</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>Dimensiones</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripcion</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>width</code>
+                    </td>
+                    <td>Propiedad que sirve para definir el ancho del elemento, admite valores en %, px y otras unidades de medida como rem, em, hv</td>
+                    <td>
+                        <p class="c-width c-bordepunteado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem molestiae autem corporis delectus! Tenetur, eveniet animi. Quia nihil voluptatibus ex ad hic! Deleniti voluptatibus cum, at laudantium quibusdam doloribus nulla!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>height</code>
+                    </td>
+                    <td>
+                        Propiedad que sirve para definir la altura del elemento, sus valores pueden ser %, px, em, rem, entre otros.
+                    </td>
+                    <td>
+                        <p class="c-bordepunteado c-height">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, totam similique quasi delectus autem eaque quam consectetur fugiat ullam distinctio excepturi quos repellat soluta asperiores ipsam placeat ratione voluptatem quo?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>overflow</code>
+                    </td>
+                    <td>Propiedad que especifica como se controlara el contenido que se desborda del elemento, sus valores pueden ser visible (por defecto), hidden (esconde el contenido que se desborda), scroll (muestra barras de desplazamiento para poder visualizar el desbosrdamiento) y auto (deja que el navegador decida que opcion usar)</td>
+                    <td>
+                        <p class="c-bordepunteado c-height c-overflow"><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio quam ut esse, expedita exercitationem iure ipsam perspiciatis a quas ex animi impedit nemo in iusto officiis harum accusantium placeat quidem!</span><span>Ratione, autem veniam distinctio eligendi officiis praesentium quibusdam, obcaecati et, at rerum in similique qui? Inventore, dolores quisquam ex eveniet quidem amet obcaecati aliquid at animi, itaque illo laboriosam corporis.</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>overflow-x</code>
+                    </td>
+                    <td>
+                        Esta propiedad especifica en el eje horizontal si se va a mostrar o no una barra de desplazamiento para el contenido que se desborda, sus valores pueden ser hidden, visible, auto
+                    </td>
+                    <td>
+                        <p class="c-bordepunteado c-height c-overflow-x">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo magni nostrum quam sunt voluptatem harum voluptates dignissimos iste animi eius dolores, nemo consequatur eos ipsa, numquam ab ut earum quas?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>overflow-y</code>
+                    </td>
+                    <td>
+                        Esta propiedad especifica en el eje vertical si se va a mostrar o no una barra de desplazamiento para el contenido que se desborda, sus valores pueden ser hidden, visible, auto
+                    </td>
+                    <td>
+                        <p class="c-bordepunteado c-height c-overflow-y">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo magni nostrum quam sunt voluptatem harum voluptates dignissimos iste animi eius dolores, nemo consequatur eos ipsa, numquam ab ut earum quas?</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
