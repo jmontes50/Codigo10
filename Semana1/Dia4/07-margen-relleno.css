@@ -1,0 +1,10 @@
+section{
+    border:1px solid red;
+    /* altura - height */
+    height: 300px;
+}
+div{
+    border:1px solid blue;
+    /* ancho */
+    width:100px;
+}

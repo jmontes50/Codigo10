@@ -13,7 +13,8 @@ div {
 rem es la unidad de medida RELATIVA que depende directamente del elemento raiz de la pagina, en este caso seria el tamaño de la fuente de la etiqueta <html>
 */
 section p{
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
+    /* 16 * 1.5 = 24px  */
 }
 /*
 em es la unidad de medida RELATIVA que depende del ultimo font-size definido dentro del arbol de elementos en el que se encuentre
@@ -22,5 +23,6 @@ body{
     font-size: 20px;
 }
 .parrafo{
+    
     font-size: 2em;
 }
