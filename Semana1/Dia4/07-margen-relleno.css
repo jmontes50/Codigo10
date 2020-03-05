@@ -8,3 +8,29 @@ div{
     /* ancho */
     width:100px;
 }
+
+div:nth-child(2){
+    /* margen exterior */
+    /* margin:20px; */
+    /* arriba */
+    margin-top:20px;
+    /* izquierda */
+    margin-left:10px;
+    /* derecha */
+    margin-right:5px;
+    /* abajo */
+    margin-bottom:30px;
+    /* margen interior */
+    padding:15px;
+}
+
+div:nth-child(1){
+    /* padding-top:10px;
+    padding-left:20px; */
+    /* padding: arribaabajo derechaizq */
+    /* padding:10px 20px; */
+    margin:15px 30px;
+    /* arriba derecha abajo izq : 
+    en el sentido de las agujas del reloj */
+    padding:5px 10px 20px 40px;
+}

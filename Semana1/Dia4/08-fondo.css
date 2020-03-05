@@ -1,0 +1,44 @@
+/* resetear los estilos */
+*{
+    margin:0;
+    padding:0;
+}
+/* ---reset */
+html, body{
+    height:100%;
+}
+.section1{
+    width:500px;
+    /* ancho-borde */
+    border-width:1px;
+    /* estilo borde : solid dashed double solid groove*/
+    border-style:dotted;
+    border-color: blue;
+    height:400px;
+    background-color: gray;
+    color: #fff;
+    background-image:url('./react.png');
+    /* repeat x - horizontal , repeat-y vertical */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+body{
+    background-color:gray;
+}
+header{
+    background-color:#CC0668;
+}
+.section2{
+    background-image:url('./textura.jpeg');
+    height:300px;
+}
+.section3{
+    height:500px;
+    background-image:url('./angular.png');
+    background-size:100%;
+    background-attachment: fixed;
+}
+
+
