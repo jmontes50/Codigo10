@@ -1,0 +1,43 @@
+/* resetear */
+*{
+    margin:0;
+    padding:0;
+}
+body,html{
+    height:100%;
+}
+header{
+    background-color:orange;
+    width:50%;
+}
+
+.principal{
+    background-color: tomato;
+    height:100px;
+}
+.azul{
+    background-color:blue;
+    height:150px;
+    width:300px;
+    /* NUNCA LE PONGA INLINE */
+    display:inline-block;
+}
+.articulo{
+    background-color:lightgreen;
+    width:400px;
+    height:150px;
+    display:inline-block;
+}
+span{
+    border:1px solid gray;
+    background-color:lightblue;
+    display:block;
+}
+.cajas{
+    height:100px;
+    border:1px solid red;
+    width:33%;
+    /* inline block siempre me crea un pequeño margen */
+    display:inline-block;
+    box-sizing: border-box;
+}

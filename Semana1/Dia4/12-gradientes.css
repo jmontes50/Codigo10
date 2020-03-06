@@ -8,6 +8,7 @@ header{
     border: 1px solid peru;
     text-align: center;
 }
+/* -webkit-lineal-gradient(direccion_gradiente, color1,color2,color2) */
 #lineal{
     background: -webkit-linear-gradient(top right, #000000, #ffffff, #00FF00);
 }
@@ -20,6 +21,7 @@ header{
 }
 p{
     /* admite valores entre 1px y 10px */
+    /* difuminado */
     filter: blur(10px);
 }
 img{

@@ -1,0 +1,17 @@
+.caja{
+    width:300px;
+    height:300px;
+    background-color: springgreen;
+    border:2px solid green;
+    /* se van a diferencias de las animaciones */
+    /* Transición */
+    transition-property:transform;
+    /* duración de la transición */
+    transition-duration: 4s;
+}
+
+/* hover se aplicará si es que pongo el mouse encima */
+.caja:hover{
+    /* Aca ya indico como voy a transformar mi elemento */
+    transform:translate(400px,300px) rotate(360deg) skewX(45deg);
+}

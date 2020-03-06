@@ -1,0 +1,10 @@
+section{
+    background-color:beige;
+}
+section img{
+    /* left o right */
+    float:right;
+}
+.repararfloat{
+    clear:both;
+}

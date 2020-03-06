@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+}
+.circulo{
+    width:100px;
+    height: 100px;
+    border-radius:50%;
+    background-color:red;
+    /* animation-name: referenciar el nombre de mi animación */
+    /* aca ya configuro la animación */
+    animation-name: cambiarcolores;
+    /* cuanto va a durar mi animación */
+    animation-duration: 4s;
+    /* retraso hasta que comience a animarse */
+    animation-delay: 2s;
+    /* va a poner la velocidad de la animación */
+    animation-timing-function: ease-in;
+}
+
+/* @keyframes nombreanimacion */
+/* aca solo defino las propiedades que van a cambiar por frame */
+@keyframes cambiarcolores{
+    /* #% {propiedad:valor;} */
+    0% {
+        background-color: orange;
+    }
+    25% {
+        background-color: #00BBCC;
+        /* scale, va a escalar mi elemento en valor a partir de 0 a 1+ (1.1 1.2) en decimales */
+        transform: scale(0.5);
+    }
+    50%{
+        background-color:green;
+        transform:scale(1.3);
+    }
+    75%{
+        background-color:#ff0022;
+        transform:scale(0.2);
+    }
+    100%{
+        background-color:slateblue;
+    }
+}
+
+.cajita{
+    width:200px;
+    height:200px;
+    border:1px solid blue;
+    /* animation: me va a agrupar varias propiedades */
+    /* nombre */
+    animation: transformarcaja 6s;
+}
+
+@keyframes transformarcaja{
+    0% {
+        background-color:lightgray;
+        transform:translate(0%,0%)
+    }
+    25% {
+        background-color:gray;
+        border-radius:50%;
+        /* moverá la posición de mi elemento, 1 solo parámetro se moverá en el eje X*/
+        transform:translate(400px);
+    }
+    50%{
+        background-color:lightblue;
+        /* con 2 parámetros translate se moverá en el eje X y eje Y */
+        transform:translate(300px,500px);
+    }
+    75%{
+        background-color:purple;
+        /* rotate rotará mi elemento según la cantidad de grados que yo le diga */
+        /* puedo combinar varias transformaciones separadas por espacio */
+        transform:translate(200px,200px) rotate(45deg);
+    }
+}
+.nave{
+    width:200px;
+    height:200px;
+    animation: volar 8s;
+}
+
+@keyframes volar{
+    0%{
+        border:2px solid red;
+    }
+    25%{
+        transform:translate(600px, 0px);
+    }
+    50%{
+        transform:translate(600px,400px) rotate(90deg);
+    }
+    75%{
+        transform:translate(0px,400px) rotate(180deg);
+    }
+    100%{
+        transform:translate(0px,0px) rotate(270deg);
+    }
+}

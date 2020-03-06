@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+}
+
+#cajapadre{
+    position:relative;
+    width:350px;
+    height:300px;
+    /* me esconde el contenido que se desborde */
+    overflow: hidden;
+}
+
+#contenedor{
+    position:absolute;
+    top:0px;
+    width:350px;
+    height:300px;
+    transition:top 1s;
+}
+
+#superior{
+    width:350px;
+    height:300px;
+}
+#inferior{
+    width:350px;
+    height:50px;
+    background-color:steelblue;
+    color:white;
+    font-family: Arial, sans-serif;
+}
+
+#contenedor:hover{
+    top:-50px;
+}

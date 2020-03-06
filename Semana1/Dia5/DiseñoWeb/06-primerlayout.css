@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    border:1px solid gray;
+}
+html,body{
+    height:100%;
+}
+header{
+    background-color:skyblue;
+    height:150px;
+    width:100%;
+}
+main{
+    width:900px;
+    margin:auto;
+}
+aside{
+    background-color:salmon;
+    width:200px;
+    height:300px;
+    float:left;
+}
+section{
+    background-color:orange;
+    width:698px;
+    height:500px;
+    float:right;
+}
+article img{
+    float:left;
+}
+.clear{
+    clear:both;
+}
+footer{
+    background-color:skyblue;
+    width:100%;
+}
+.divfooter{
+    background-color:steelblue;
+    height:100px;
+    width:33%;
+    display:inline-block;
+}
