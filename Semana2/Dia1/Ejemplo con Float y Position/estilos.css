@@ -69,3 +69,83 @@ html,body{
 #listamenu li:hover ul{
     display:block;
 }
+main{
+    width:96%;
+    padding:2%;
+    height:100%;
+    background-image: url('./assets/textura.jpg');
+    background-size:cover;
+    background-repeat: repeat;
+}
+main > div{
+    width:960px;
+    margin:0 auto;
+}
+#articulosprincipales{
+    float:left;
+    width:620px;
+    background-color:white;
+    padding:20px;
+    border-radius:10px;
+}
+article{
+    /* acá sucederán cosas */
+    position:relative;
+}
+article time{
+    width:80px;
+    position:absolute;
+    top:-5px;
+    left:-100px;
+    background-color:salmon;
+    padding:15px 5px;
+    border-radius:5px;
+    box-shadow:3px 3px 5px black;
+}
+.numerodia{
+    font: bold 36px 'Sen',Verdana,sans-serif;
+    color:white;
+    text-align:center;
+}
+.nombredia{
+    font:12px Verdana, sans-serif;
+    color:white;
+    text-align:center;
+}
+article h2{
+    font:bold 28px Verdana, sans-serif;
+    margin-bottom:5px;
+}
+article p{
+    font: 16px Arial, sans-serif;
+}
+figure{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+figure img{
+    padding:5px;
+    border:1px solid gray;
+}
+
+.infoadicional{
+    float:right;
+    width:250px;
+    padding:20px;
+    background-color:beige;
+    margin-left:10px;
+    border-radius:20px;
+    font-family:Verdana;
+}
+footer{
+    width:96%;
+    padding:2%;
+    background-color:green;
+}
+footer > div{
+    width:960px;
+    margin:0 auto;
+}
+.recuperar{
+    clear:both;
+}
