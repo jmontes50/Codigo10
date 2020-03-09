@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+}
+html,body{
+    height:100%;
+}
+#cabeceralogo{
+    width:96%;
+    padding:0 2%;
+    height:150px;
+    background-color:#FF6155;
+}
+#cabeceralogo > div{
+    width:960px;
+    margin:0 auto;
+    padding-top:45px;
+}
+#cabeceralogo h1{
+    font-family:'Sen',Arial, sans-serif;
+    font-weight: bold;
+    color:beige;
+    font-size: 45px;
+}
+#menuprincipal{
+    width:96%;
+    height:50px;
+    padding:0 2%;
+    background-color: #94FFA2;
+    border-top:1px solid rgb(5, 77, 15);
+    border-bottom:1px solid rgb(5, 77, 15);
+}
+#menuprincipal > div{
+    width:960px;
+    margin:0 auto;
+}
+#menuprincipal li{
+    display:inline-block;
+    height:35px;
+    /* margin padding - 10px 10px 10px 10px */
+    /* sentido agujas reloj a partir de arriba */
+    padding:15px 10px 0 10px;
+    margin-right: 5px;
+}
+#menuprincipal li:hover{
+    background-color:rgb(10, 235, 55);
+    cursor: pointer;
+}
+#menuprincipal a{
+    font:bold 18px Arial;
+    color:#333;
+    text-decoration: none;
+}
+#listamenu > li{
+    position:relative;
+    display:inline-block;
+}
+#listamenu li>ul{
+    display:none;
+    position:absolute;
+    top:50px;
+    left:0;
+    background-color: #94FFA2;
+    box-shadow:3px 3px 4px black;
+    border-radius:0 0 5px 5px;
+    z-index:999;
+}
+#listamenu li:hover ul{
+    display:block;
+}

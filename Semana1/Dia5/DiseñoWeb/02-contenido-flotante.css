@@ -3,7 +3,7 @@ section{
 }
 section img{
     /* left o right */
-    float:right;
+    float:left;
 }
 .repararfloat{
     clear:both;

@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:10px;
+    border:1px solid gray;
+    /* Importante!!!! */
+    box-sizing: border-box;
+}
+
+.block{
+    display:block;
+    width:300px;
+    background-color:firebrick;
+}
+.inlineblock{
+    width:200px;
+    height:100px;
+    background-color:orange;
+    display:inline-block;
+}
+.caja1, .caja2, .caja3, .caja4, .caja5{
+    width:200px;
+    height:200px;
+    background-color:orangered;
+    float:left;
+}
+.reparar{
+    /* left, right y both */
+    clear:both;
+}
+.caja2{
+    /* relativa a si mismo, donde deberia ubicarse */
+    /* 1. me esta respetando la estructura HTML y sus hermanitos también
+    2. se mueve a partir de su posición relativa */
+    position:relative;
+    top:15px;
+    left:15px;
+
+}
+.caja4{
+    /* position:Absolute;
+    
+    1. es como si yo removiera ese elemento del HTML*/
+    /* 2. se va a colocar referente al ultimo ancestro que tenga una posicion definida */
+    position:absolute;
+    top:25px;
+    left:25px;
+    background-color:skyblue;
+}
+.padre{
+    /* ancestro papa de cajas, con una posicion!!!! */
+    position:relative;
+}
+/* z-index, se comporta como si fueran capas u hojas encimas de otras, tienen que tener position relative o absolute */
+.caja1{
+    position:relative;
+    z-index:3;
+}
+
+.publicidad{
+    border:2px dashed yellow;
+    background-color:greenyellow;
+    /* posiciona mi elemento pero a aprtir de la ventana del navegador */
+    position:fixed;
+    right:50px;
+    bottom:50px;
+    width:200px;
+    height:200px;
+}
