@@ -5,6 +5,7 @@
 }
 html,body{
     height:100%;
+    
 }
 #cabeceralogo{
     width:96%;
@@ -72,10 +73,12 @@ html,body{
 main{
     width:96%;
     padding:2%;
-    height:100%;
     background-image: url('./assets/textura.jpg');
+    height:100%;
     background-size:cover;
     background-repeat: repeat;
+    padding-bottom:100px;
+
 }
 main > div{
     width:960px;
@@ -91,8 +94,10 @@ main > div{
 article{
     /* acá sucederán cosas */
     position:relative;
+    padding:0px 40px 20px 40px;
 }
 article time{
+    display:block;
     width:80px;
     position:absolute;
     top:-5px;
