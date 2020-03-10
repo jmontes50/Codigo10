@@ -1,0 +1,55 @@
+.contenedor{
+    width:900px;
+    height:400px;
+    border:1px solid blue;
+    padding:10px;
+    /* flexbox se aplica en el papá
+    como un display */
+    display:flex;
+    /* flex-direction: modificará de forma el orden de los elementos, row es el valor por defecto*/
+    flex-direction: row;
+    /* space-between,
+    space-around,
+    space-evenly,
+    center */
+    /* alinear elementos de forma horizontal */
+    /* cuidado al aplicar esto y cambiar el flex-direction */
+    justify-content: center;
+    /* alinear los elementos de forma vertical  */
+    /* 1 sola fila de elementos
+    me conviene utilizar align-items */
+    /* align-items:center; */
+
+    /*!!! cuando tenga más filas es mejor utilizar align-content */
+    align-content: center;
+    /* wrap me permitirá manejar si tengo varios elementos en un mismo contenedor para saber si estos elementos mantendrán sus proporciones poniendose en filas debajo de los demás */
+    /* flex-wrap: wrap-reverse; */
+
+}
+.caja{
+    height:100px;
+    /* width:100px; */
+    padding:20px;
+    box-sizing: border-box;
+    border:1px solid red;
+}
+.item1{
+    /* tamaño inicial */
+    flex-basis: 50px;
+    /* grow, me dirá la relación de crecimiento a comparación de sus hermanos */
+    flex-grow:1;
+    flex-shrink:1;
+}
+.item2{
+    /* order = 0 */
+    /* order:3; */
+    flex-basis: 100px;
+    flex-grow:2;
+    flex-shrink:2;
+}
+.item3{
+    flex-basis: 70px;
+    flex-grow:1;
+    flex-shrink:3;
+    /* align-self:flex-end; */
+}
