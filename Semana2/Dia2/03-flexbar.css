@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* temporal */
+    /* border:1px solid gray; */
+}
+html,body{
+    height:100%;
+}
+.contenedor{
+    width:100%;
+    height:100px;
+    display:flex;
+    /* padding:20px; */
+    justify-content: space-between;
+    background-color: #100E17;
+}
+
+.logo{
+    flex-basis: 200px;
+    flex-grow:1;
+    display:flex;
+    align-items: center;
+    padding:0 20px;
+}
+.items{
+    flex-basis: 600px;
+    flex-grow:6;
+    display:flex;
+}
+.buscar{
+    flex-basis: 150px;
+    flex-grow:1;
+}
+
+.logo i{
+    color:#FF8A00;
+}
+
+.logo span{
+    font-family: 'Sen',sans-serif;
+    font-size:26px;
+    color:white;
+}
+
+.item{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    flex-grow:1;
+    justify-content:space-evenly;
+    color:whitesmoke;
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    font-weight: bold;
+}
+.buscar{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.buscar input{
+    width:120px;
+    height:25px;
+    border-radius:10px 0 0 10px;
+    background-color:#201C29;
+    border:1px solid gray;
+}
+
+.buscar button{
+    width:25px;
+    height:25px;
+    border-radius:0 10px 10px 0;
+    background-color:#FF8A00;
+}
+.buscar i{
+    color:white
+}
+.item:nth-of-type(1):hover{
+    color:blue;
+} 
+.item:nth-of-type(2):hover{
+    color:green;
+} 
+.item:nth-of-type(3):hover{
+    color:yellow;
+} 
+.item:nth-of-type(4):hover{
+    color:red;
+} 
+.item:nth-of-type(5):hover{
+    color:orange;
+} 
+/* 1. necesitaba una manera de obtener elemento por elemento
+2. :hover
+3: color y sabor */
+
+/* nth-child */
