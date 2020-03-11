@@ -1,0 +1,55 @@
+.contenedor{
+    border:1px solid gray;
+    padding:10px;
+    height:500px;
+    /* indicamos que voy a tener un display: grid */
+    display:grid;
+    /* plantilla en columnas */
+    /* grid-template-columns:400px 200px 150px;
+    grid-template-rows:200px 100px 50px; */
+    /* grid:template: filas / columnas */
+    /* grid-template: 200px 100px 50px / 400px 200px 150px; */
+    /* grid-template: 1fr 1fr 1fr / 150px 1fr 2fr; */
+    grid-template:repeat(3,1fr) / repeat(4, 1fr);
+    /* espaciado entre elementos */
+    grid-gap:10px;
+}
+
+.item{
+    background-color: skyblue;
+    border:1px solid red;
+    padding:10px;
+}
+/* nth-of-type me permite numerar mis elementos y ubicar elemento por elemento según su orden */
+.item:nth-of-type(1){
+    background-color:purple;
+    /* le digo segunlas lineas formadas por mi grilla que cambie su tamaño con una lineadeinicio / lineafinal */
+    grid-column:1 / 5;
+}
+.item:nth-of-type(2){
+    background-color:green;
+    /* le digo segun las lineas formadas por mi grilla e las filas que inicie en lineainicio / lineafinal */
+    grid-row:2 / 4;
+}
+.item:nth-of-type(3){
+    background-color:brown;
+    grid-column:2 / 5;
+    grid-row: 2 / 4;
+}
+
+.contenedor2{
+    border:1px solid black;
+    height:500px;
+    display:grid;
+    /* filas / columnas */
+    /* grid-template: filas-3filasde1fr / 3columnasquecomominimotengan150pxYMaximo250px */
+    grid-template:repeat(3,100px) / repeat(3, minmax(150px,250px));
+    /* minmax(tamañomin,tamañomax) */
+
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+.item2{
+    border:1px solid red;
+}
