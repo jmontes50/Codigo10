@@ -1,4 +1,4 @@
-var sueldo = 15000;
+var sueldo = 15001;
 
 // if (condicion a evaluar){
 //se ejecuta si es verdad
