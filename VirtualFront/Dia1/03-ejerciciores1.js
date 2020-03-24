@@ -4,6 +4,7 @@ var cantidades = [];
 var cantidad = +prompt("Ingrese cuantas cantidades se va a evaluar");
 console.log(cantidad);
 
+//arreglo.push(elementonuevo)   .push() me permite añadir un elemento al final de un arreglo
 for(let i = 0; i < cantidad; i++){
     cantidades.push(+prompt(`Ingrese el número ${i+1} a evaluar `));
 }
