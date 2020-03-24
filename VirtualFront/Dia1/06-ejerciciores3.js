@@ -35,4 +35,3 @@ switch (true) {
 }
 
 console.log(`El trabajador ${nombre} ha trabajado ${horas} horas y su sueldo es ${sueldototal} con descuentos ya aplicados`);
-
