@@ -1,0 +1,5 @@
+edad = input("Ingresa tu edad")
+print(type(edad))
+edad = int(edad)
+print(type(edad))
+print(f"En 10 años tendras {edad+10}")
