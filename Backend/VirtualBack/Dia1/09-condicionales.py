@@ -50,23 +50,64 @@ texto = "Buenas tardes"
 # Facil: Teniendo 10 numeros indicar cuales son pares y cuales son impares
 numeros = [2, 6, 9, 15, 18, 19, 23, 43, 68, 14]
 lista_numeros=[]
-for numero in range(10):
-    dato = input(f"Ingresa el numero {numero+1}: ")
-    dato = int(dato)
-    lista_numeros.append(dato)
-print(lista_numeros)
-numeros_pares=[]
-numeros_impares=[]
-for numero in lista_numeros:
-    if numero%2==0:
-        numeros_pares.append(numero)
-    else:
-        numeros_impares.append(numero)
-print(f"Los numeros pares son: {numeros_pares}")
-print("Los numeros impares son: {}".format(numeros_impares))
+# for numero in range(10):
+#     dato = input(f"Ingresa el numero {numero+1}: ")
+#     dato = int(dato)
+#     lista_numeros.append(dato)
+# print(lista_numeros)
+# numeros_pares=[]
+# numeros_impares=[]
+# for numero in lista_numeros:
+#     if numero%2==0:
+#         numeros_pares.append(numero)
+#     else:
+#         numeros_impares.append(numero)
+# print(f"Los numeros pares son: {numeros_pares}")
+# print("Los numeros impares son: {}".format(numeros_impares))
 
 
 # se desea saber cuantos son pares y cuantos son impares
 numeros = [2, 6, 9, 15, 18, 19, 23, 43, 68, 14]
 # hay 4 pares
 # hay 6 impares
+pares,impares=0,0
+for numero in numeros:
+    if numero%2==0:
+        pares += 1
+    else:
+        impares += 1
+# print("hay {} pares, {} impares".format(pares, impares))
+
+# WHILE => MIENTRAS
+# un bucle infinito hasta que cierta condicion no se cumpla
+# en python no existe el DO - WHILE, solo el WHILE
+# numero=0
+# while (numero<10):
+    # print(numero)
+    # numero+=1
+
+# pass => no hace nada pero como en python es muy importante la identacion no podemos dejar un bloque sin contenido entonces se usa pass para recien poner algo despues
+for numero in range(0,10):
+    pass
+
+# Teniendo el siguiente texto
+# texto = "Backend"
+# y por medio de su captura de codigo ascii
+# https://elcodigoascii.com.ar/
+# print(ord("C"))
+# necesito saber cuantas vocales tengo
+# Resultado: hay 2 vocales
+# Ahora para convertir de una posicion de la tabla ascii a su caracter se usa:
+# print(chr(67))
+
+texto = input("Ingrese un texto: ")
+vocales=[65,69,73,79,85,97,101,105,111,117]
+cant_vocales=0
+# primero itero el texto, sacando letra por letra
+for letra in texto:
+    # itero el arreglo de las vocales 
+    for vocal in vocales:
+        # comparo esa letra convertida a su ascii con la vocal del arreglo y si coincide incremento la variable en 1 unidad
+         if ord(letra)==vocal:
+             cant_vocales+=1
+print("Hay {} vocales".format(cant_vocales))
