@@ -3,6 +3,7 @@
 # ELSE => SINO
 # ELIF => SINO SI
 # El if siempre va a funcionar mientas la condicion resultante sea  VERDADERA
+# SWITCH CASE => python no posee el switch
 edad = 15
 # print(edad>18)
 # if edad > 18:
@@ -71,11 +72,11 @@ numeros = [2, 6, 9, 15, 18, 19, 23, 43, 68, 14]
 # hay 4 pares
 # hay 6 impares
 pares,impares=0,0
-for numero in numeros:
-    if numero%2==0:
-        pares += 1
-    else:
-        impares += 1
+# for numero in numeros:
+#     if numero%2==0:
+#         pares += 1
+#     else:
+#         impares += 1
 # print("hay {} pares, {} impares".format(pares, impares))
 
 # WHILE => MIENTRAS
@@ -83,12 +84,13 @@ for numero in numeros:
 # en python no existe el DO - WHILE, solo el WHILE
 # numero=0
 # while (numero<10):
-    # print(numero)
-    # numero+=1
+#     print(numero)
+#     numero+=1
 
 # pass => no hace nada pero como en python es muy importante la identacion no podemos dejar un bloque sin contenido entonces se usa pass para recien poner algo despues
 for numero in range(0,10):
     pass
+
 
 # Teniendo el siguiente texto
 # texto = "Backend"
@@ -100,14 +102,14 @@ for numero in range(0,10):
 # Ahora para convertir de una posicion de la tabla ascii a su caracter se usa:
 # print(chr(67))
 
-texto = input("Ingrese un texto: ")
+# texto = input("Ingrese un texto: ")
 vocales=[65,69,73,79,85,97,101,105,111,117]
 cant_vocales=0
 # primero itero el texto, sacando letra por letra
-for letra in texto:
-    # itero el arreglo de las vocales 
-    for vocal in vocales:
-        # comparo esa letra convertida a su ascii con la vocal del arreglo y si coincide incremento la variable en 1 unidad
-         if ord(letra)==vocal:
-             cant_vocales+=1
-print("Hay {} vocales".format(cant_vocales))
+# for letra in texto:
+#     # itero el arreglo de las vocales 
+#     for vocal in vocales:
+#         # comparo esa letra convertida a su ascii con la vocal del arreglo y si coincide incremento la variable en 1 unidad
+#          if ord(letra)==vocal:
+#              cant_vocales+=1
+# print("Hay {} vocales".format(cant_vocales))
