@@ -72,6 +72,15 @@ class Empresa{
          * 1. que el usuario ingrese su numero de telefono
          * 2. segun el numero de telefono, me imprima sus mensajes
          */
+        let telefono = prompt("Ingrese su numero de teléfono");
+
+        for(let i=0; i < this.emp_usu.length; i++){
+            if(telefono == this.emp_usu[i].usu_telf){
+                console.table(this.emp_usu[i].usu_msjs);
+            }else{
+                console.log("Teléfono no existe");
+            }
+        }
     }
 
 }
@@ -86,6 +95,7 @@ do{
                     Escoja entre las siguientes opciones
                     1. Agregar un Usuario
                     2. mandar un mensaje a un usuario
+                    3. vea sus mensajes
                     4. Salir`);
 
     switch(opcion){
@@ -94,6 +104,9 @@ do{
             break;
         case 2:
             tecsup.mandarMensaje();
+            break;
+        case 3:
+            tecsup.verMensajes();
             break;
         case 4:
             console.log("Bye, salio del sistema");
