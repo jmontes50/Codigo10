@@ -78,6 +78,7 @@ class Pizzeria {
         this.nombre = nombre;
         this.direccion = direccion;
         this.platos = [];
+        // this.mostrarPlatos();
     }
 
     agregarPlato(objPlato){
