@@ -73,3 +73,29 @@ console.log("sincharat=>", modelo[4]);
  * 1. Una función que reciba un string me cuente cuantas vocales tiene
  * 2. una funcion que reciba un string y me cuente cuantas palabras tiene
  */
+
+ //Ejercicio 1
+ let palabra = prompt("Ingrese la palabra u oración a evaluar");
+// let vocales = 0;
+
+//  for(let i = 0; i < palabra.length; i++){
+//      //el caracter en la posición i, i irá aumentando
+//      let c = palabra.charAt(i); //palabra[i]
+//      if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+//         vocales++;
+//      }
+//  }
+//  console.log(`${palabra} tiene ${vocales} vocales`);
+
+ //ejercicio2
+ 
+ contador = 0;
+ palabra = palabra.trim();
+ for(let i = 0; i < palabra.length; i++){
+    let c = palabra.charAt(i);
+    if(c == " "){
+        contador++;
+    }
+ }
+
+ console.log(`${palabra} tiene ${contador+1} palabras`);
