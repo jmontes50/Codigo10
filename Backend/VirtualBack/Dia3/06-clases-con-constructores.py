@@ -13,10 +13,10 @@ class Persona:
 
 persona1 = Persona("Eduardo",27)
 # print(persona1.edad)
-persona1.saludar()
+# persona1.saludar()
 # El metodo init es lo mismo que crear una instancia de la clase
 persona1.__init__("Alejandro",35)
-persona1.saludar()
+# persona1.saludar()
 
 # EJERCICIO 
 # Crear una clase llamada Alumno que reciba en su constructor el nombre, su fecha de nacimiento y cursos que va a ser una lista vacía y por medio de un menu ingresa: 
@@ -26,3 +26,45 @@ persona1.saludar()
 # 4. Salir, 
 # ademas de un metodo que nos diga cuantos años tiene en base a su fecha de nacimiento
 # PISTA => el menu no es parte de la clase 
+
+from datetime import datetime
+class Alumno:
+    def __init__(self, nombre, fecnac, cursos):
+        self.nombre = nombre
+        self.fecnac = fecnac
+        self.cursos = cursos
+
+    def agregar_curso(self, nombre_curso):
+        self.cursos.append(nombre_curso)
+        return 'Se agrego el curso exitosamente'
+
+    def mostrar_cursos(self):
+        for curso in self.cursos:
+            print("*",curso)
+    
+    def mostrar_edad(self):
+        anio = int(self.fecnac[:4])
+        anio_actual = int(datetime.now().year)
+        edad = anio_actual - anio
+        return edad
+
+
+nombre = input('Ingrese su nombre: ')
+fecha_nacimiento = input('Ingrese su fecha de nacimiento YYYY-MM-DD: ')
+cursos = []
+objAlumno = Alumno(nombre, fecha_nacimiento, cursos)
+while True:
+    print('1. Nuevo curso \n2. Mostrar los cursos \n3. Mostrar su edad \n4. Salir')
+    opcion = int(input('Ingrese la opcion: '))
+    if opcion==1:
+        curso = input('Ingrese el nombre del curso: ')
+        respuesta = objAlumno.agregar_curso(curso)
+        print(respuesta)
+    elif opcion == 2:
+        print('Los cursos son')
+        objAlumno.mostrar_cursos()
+    elif opcion == 3:
+        print('Su edad es:', objAlumno.mostrar_edad(), 'años')
+    else:
+        print('Adios')
+        break

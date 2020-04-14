@@ -37,3 +37,10 @@ print(re.sub("martes","miercoles",texto3))
 
 # EJERCICIO
 # Usando el modulo de re se debe ingresar una cadena texto y ver si hay un numero, y una mayuscula como minimo ademas de tener una longitud de no menor de 6 caracteres, si todo es valido indicar que la contraseña es valida, sino indicar que no cumple con los requisitos minimos
+
+import re 
+password = input("Ingrese su contraseña: ")
+if re.match(r'[A-Za-z0-9]{6,}',password):
+    print('La contraseña cumple con los requisitos')
+else:
+    print('Contraseña incorrecta')

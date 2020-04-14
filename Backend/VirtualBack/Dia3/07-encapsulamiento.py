@@ -38,9 +38,9 @@ class Automovil:
 
 # instanciar una clase === ejemplarizar una clase === crear un objeto
 miAuto = Automovil(40,"Ok",20,"Cerradas",motor=2000)
-print(miAuto.largo)
-print(miAuto.__ruedas)
-miAuto.mostrarRuedas()
+# print(miAuto.largo)
+# print(miAuto.__ruedas)
+# miAuto.mostrarRuedas()
 # miAuto.__chequeo_interno()
 miAuto.arrancar(True)
 
@@ -60,3 +60,55 @@ miAuto.arrancar(True)
 # Tener un metodo otro_vector() que tome otras coordenadas y calcule su vector resultante ((x2-x1),(y2-y1))
 # PLUS: Calcular la distancia entre los dos puntos => ((x2-x1)^2+(y2-y1)^2)^1/2, este debe ser un metodo privado que se ejecute cuando llamamos al metodo otro_vector()
 
+class Coordenadas:
+    def __init__(self, x=0,y=0):
+        self.x = x
+        self.y = y
+
+    def valores_ingresados (self):
+        return 'Sus valores son: x={}, y={}'.format(self.x, self.y)
+    
+    def definir_cuadrante(self):
+        if x>=0 and y>=0:
+            return 'Esta en el primer cuadrante'
+        elif y>=0 and x<0:
+            return 'Esta en el segundo cuadrante'
+        elif x<0 and y<0:
+            return 'Esta en el tercer cuadrante'
+        else:
+            return 'Esta en el cuarto cuadrante'
+      
+    def otro_vector(self,x2,y2):
+        self.x2=x2
+        self.y2=y2
+        print(type(self.x2))
+        print(type(self.x))
+        print('La distancia es: ',self.__distancia())
+        return f'(({x2-x}),({y2-y}))'
+    
+    def __distancia(self):
+        # ((x2-x1)^2+(y2-y1)^2)^1/2
+        import math
+        return math.sqrt(((self.x2-self.x)^2+(self.y2-self.y)^2))
+
+try:
+    x = int(input('Ingrese valor de x: '))
+    y = int(input('Ingrese valor de y: '))
+except:
+    print('Solo datos numericos')
+
+objCoordenadas = Coordenadas(x,y)
+# HACER UN MENU 
+while True:
+    opc = input('1. Mostrar coordenadas \n2. Verificar Cuadrante \n3. Ingresar otro vector \n4. Salir')
+    if opc=='1':
+        print(objCoordenadas.valores_ingresados())
+    elif opc=='2':
+        print(objCoordenadas.definir_cuadrante())
+    elif opc=='3':
+        x2 = int(input('Ingrese el segundo valor de x: '))
+        y2 = int(input('Ingrese el segundo valor de y: '))
+        print('Su vector resultante es:',objCoordenadas.otro_vector(x2,y2))
+    else:
+        print('Adios')
+        break
