@@ -90,3 +90,49 @@ let autos = [
     transmision: "manual",
   }
 ];
+
+//1. imprimir la marca, modelo y año de cada auto
+
+autos.forEach((auto)=>{
+    console.log(`El ${auto.marca} ${auto.modelo} es del año ${auto.year} con un costo de ${auto.precio} USD`);
+});
+
+//2. en un arreglo solamente obtener las marcas de los autos
+
+let marcas = autos.map((auto)=>{
+    return auto.marca;
+});
+
+console.log("marcas map",marcas);
+
+//3. obtener un arreglo de Autos de solamente color Rojo
+
+let autosRojos = autos.filter((auto)=>{
+    return auto.color == "Rojo";
+});
+
+console.table("AUTOS ROJOS", autosRojos);
+
+//4. a partir de las mi arreglo donde tengo las marcas de mios autos voy a filtrarlo de tal manera que
+//ninguna marca se repita
+
+// console.log("indexOf ford",marcas.indexOf("Ford"));
+
+let marcaUnica = marcas.filter((marca,indice)=>{
+    console.log("marca",marca);
+    console.log("indice",indice);
+    console.log("indexOf(marca)",marcas.indexOf(marca));
+
+    return marcas.indexOf(marca) == indice
+});
+
+console.log("filter indexOf", marcaUnica);
+
+//5. Saber cuanto me suman todos los autos, cuanto volor tienen todos juntos
+
+let valorInventario = autos.reduce((total, auto) => {
+    return total + auto.precio;
+},0);
+
+console.log("inventario reduce",valorInventario);
+
