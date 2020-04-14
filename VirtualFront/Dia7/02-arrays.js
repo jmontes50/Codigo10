@@ -36,21 +36,25 @@ let aprobados = notas.filter((elemento)=>{
     if(elemento > 10){
         return elemento;
     }
-})
+});
 console.log("filtrado",aprobados);
 
 //FOREACH
 //forEach((elemento_de_mi_arreglo)=>{ por cada uno de los elementos ejecutar código})
-// notas.forEach((elemento,indice,arr)=>{
-//     console.log(`La posición es: ${indice}`);
-//     console.log(`Mi elemento es: ${elemento}`);
-//     console.log(`El arreglo es: ${arr}`);
-// });
+//NO RETORNA NINGUN TIPO DE VALOR
+notas.forEach((elemento,indice,arr)=>{
+    console.log(`La posición es: ${indice}`);
+    console.log(`Mi elemento es: ${elemento}`);
+    console.log(`El arreglo es: ${arr}`);
+});
 
-lista.forEach((producto,i,arreglito)=>{
-    console.log(producto);
-    console.log(i);
-    console.log(arreglito);
-})
+// lista.forEach((producto,i,arreglito)=>{
+//     console.log(producto);
+//     console.log(i);
+//     console.log(arreglito);
+// })
+
+
+
 
 
