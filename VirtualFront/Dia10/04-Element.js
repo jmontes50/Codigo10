@@ -68,5 +68,5 @@ console.log(arrParrafos); //Esto es un arreglo de elementos p
 
 //Por cada párrafo le cambio su contenido
 for(let i = 0; i < arrParrafos.length; i++){
-    arrParrafos[i].innerHTML = "Nuevo Contenido del For!!!";
+    arrParrafos[i].innerHTML = "<code>Nuevo Contenido del For!!!</code>";
 }
