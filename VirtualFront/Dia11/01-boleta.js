@@ -70,3 +70,10 @@ cuerpo = cuerpo + `<tr>
 console.log(cuerpo);
 tbody.innerHTML = cuerpo;
 tabla.appendChild(tbody);
+
+if(subtotal >= 50){
+    let p = document.createElement("p");
+    p.innerHTML = "Puedes pagar con tarjeta";
+    //añade un elemento como primer hijo
+    contenido.prepend(p);
+}
