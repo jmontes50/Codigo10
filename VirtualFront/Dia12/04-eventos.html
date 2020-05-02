@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+      }
+      body {
+        background-color: mediumturquoise;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .correito {
+          width:500px;
+          height:50px;
+          background-color:transparent;
+          border:0;
+          outline:none;
+          border-bottom:3px solid green;
+          font-size:40px;
+          color:thistle;
+          padding:10px;
+      }
+      .mensaje{
+          width:500px;
+          height:45px;
+          font-size:25px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input
+        type="text"
+        class="correito"
+        id="inputCorreo"
+        placeholder="Ingrese su correo"
+      />
+      <br/>
+      <span class="mensaje" hidden="true" id="resultado">
+        El correo ingresado ya existe en nuestra BD
+      </span>
+    </div>
+    <script src="04-eventos.js"></script>
+  </body>
+</html>

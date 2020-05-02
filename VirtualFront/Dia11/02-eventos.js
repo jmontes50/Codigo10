@@ -25,19 +25,19 @@ let btntema = document.getElementById("btntema");
 //     }
 // }
 
-let click = () => {
-    console.log("Cliiiiiiiiiiiiiiiiiiiiick!!!");
-}
+// let click = () => {
+//     console.log("Cliiiiiiiiiiiiiiiiiiiiick!!!");
+// }
 
-btntema.onclick = click;
+// btntema.onclick = click;
 
 //2da forma
 //elemento.addEventListener("evento", function(){codigo a ejecutar});
-// btntema.addEventListener("click", () => {
-//   let link = document.getElementById("estilos");
-//   if (link.getAttribute("href") == "02-eventos-claro.css") {
-//     link.setAttribute("href", "02-eventos-oscuro.css");
-//   } else {
-//     link.setAttribute("href", "02-eventos-claro.css");
-//   }
-// });
+btntema.addEventListener("click", () => {
+  let link = document.getElementById("estilos");
+  if (link.getAttribute("href") == "02-eventos-claro.css") {
+    link.setAttribute("href", "02-eventos-oscuro.css");
+  } else {
+    link.setAttribute("href", "02-eventos-claro.css");
+  }
+});

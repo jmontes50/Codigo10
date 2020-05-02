@@ -28,6 +28,25 @@ let hacerClick = (e) => {
     if(e.target.getAttribute("name") == "contenedor2"){
         e.target.setAttribute("class","circulo");
     }
+
+    console.log(`X => ${e.clientX} respecto a la ventana`);
+    console.log(`Y => ${e.clientY} respecto a la ventana`);
+
+    console.log(`X => ${e.offsetX} respecto al elemento`);
+    console.log(`Y => ${e.offsetY} respecto al elemento`);
+
+    //podemos evaluar si al hacer click estaba presionada determinada tecla 
+    if(e.altKey == true){
+        console.log("oye me has hecho click presionando la tecla Alt!");
+    }
+
+    if(e.shiftKey == true){
+        console.log("oye me has hecho click presionando la tecla shift!");
+    }
+
+    if(e.ctrlKey == true){
+        console.log("oye me has hecho click presionando la tecla control!");
+    }
 }
 
 caja1.onclick = hacerClick;
