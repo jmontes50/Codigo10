@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container mt-4">
+        <h1>Perfil de Usuario</h1>
+        <section class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label>Nombres:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese sus nombres"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese sus apellidos"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Correito:</label>
+                        <input type="email" class="form-control" placeholder="Ingrese su correo"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" class="form-control"/>
+                        <small class="form-text text-muted">Tu contraseña debe tener al menos 6 caracteres</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Acerca de mí:</label>
+                        <textarea class="form-control" cols="30" rows="12" placeholder="Hablenos acerca de Ud."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Elige los idiomas que hablas:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="spanish"/>
+                                </div>
+                            </div>
+                            <label for="spanish" class="form-control">Español</label>
+                        </div>
+                        <!-- item2 -->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="english"/>
+                                </div>
+                            </div>
+                            <label for="english" class="form-control">Inglés</label>
+                        </div>
+                        <!-- item3 -->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="japanese"/>
+                                </div>
+                            </div>
+                            <label for="japanese" class="form-control">Japonés</label>
+                        </div>
+                    </div>
+                    <!-- form-group género -->
+                    <div class="form-group">
+                        <label>Elegir Género</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="radio" id="femenino" name="genero">
+                                </div>
+                            </div>
+                            <label for="femenino" class="form-control">Femenino</label>
+                        </div>
+                        <!-- inputgroup1 -->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="radio" id="masculino" name="genero">
+                                </div>
+                            </div>
+                            <label for="masculino" class="form-control">Masculino</label>
+                        </div>
+                        <!-- inputgroup2 -->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="radio" id="otro" name="genero">
+                                </div>
+                            </div>
+                            <label for="otro" class="form-control">Prefiero no divulgarlo</label>
+                        </div>
+                    </div>
+                    <!-- select -->
+                    <div class="form-group">
+                        <label>Estado Civil:</label>
+                        <select class="form-control">
+                            <option value="S">Soltero</option>
+                            <option value="C">Casado</option>
+                            <option value="D">Divorciado</option>
+                            <option value="E">Es complicado</option>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block btn-lg mb-2" value="Enviar Formulario"/>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JS Bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
