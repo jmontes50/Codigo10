@@ -33,7 +33,7 @@ def crud_tipo():
                 'ok':False
             }), 404
     elif request.method == 'GET':
-        cur.execute('SELECT * from t_tipo')
+        cur.execute('SELECT * from t_tipo where tipo_est=true')
         # fetchall() => devuelve todas las coincidencias de mi query, lo convierte en una tupla de tuplas 
         # fetchone() => devuelve la primer coincidencia de mi query, lo deja en una sola tupla
         data = cur.fetchall()
@@ -57,9 +57,24 @@ def crud_tipo():
 def tipo_especifico(id):
     cur = mysql.connection.cursor()
     if request.method == 'PUT':
-        return 'hiciste put'
+        data = request.get_json()
+        if data.__contains__('nombre'):
+            cur.execute(f"UPDATE t_tipo set tipo_nombre= '{data['nombre']}' where tipo_id={id}")
+            # cur.execute("UPDATE t_tipo set tipo_nombre= (%s) where tipo_id=(%s)",(data['nombre'],id))
+            mysql.connection.commit()
+            cur.close()
+            return jsonify({
+                'ok':True,
+                'message':'Se actualizó el tipo exitosamente'
+            }), 201
     elif request.method == 'DELETE':
-        return 'hiciste delete'
+        cur.execute(f'UPDATE t_tipo set tipo_est=false where tipo_id={id}')
+        mysql.connection.commit()
+        cur.close()
+        return jsonify({
+            "ok":True,
+            "message":"Se inhabilito el tipo exitosamente"
+        }), 201
     elif request.method =='GET':
         cur.execute(f"SELECT * from t_tipo where tipo_id ={id}")
         data = cur.fetchone()
@@ -78,6 +93,8 @@ def tipo_especifico(id):
                 "ok":False,
                 "message":"No hay informacion que mostrar"
             }),404
+
+# Agregar una ruta para ingresar un nuevo ambiente pero que verifique que el tipo y el pabellon existen antes de ingresar y que devuelva el ambiente ingresado correctamente.
 
 @app.route("/")
 def inicio():
