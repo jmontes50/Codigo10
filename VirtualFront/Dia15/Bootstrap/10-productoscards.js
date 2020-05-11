@@ -26,6 +26,8 @@ let productos = [
 ];
 
 let divTarjetas = document.getElementById("tarjetas");
+let inputFiltro = document.getElementById("inputfiltro");
+let btnFiltro = document.getElementById("btnfiltro");
 
 let dibujarTarjetas = (arrProd) => {
     let cards = '';
@@ -47,3 +49,15 @@ let dibujarTarjetas = (arrProd) => {
 }
 
 dibujarTarjetas(productos);
+
+//Aquí vamos a filtrar
+btnFiltro.addEventListener("click",()=>{
+    let textoFiltro = inputFiltro.value; //texto del inputfiltro
+    console.log(textoFiltro)
+    
+    let prodFiltrados = productos.filter((prod)=>{ //prodFiltrados => [] de todos los productos que esten filtrados
+        //includes va a retornar un true o false en caso encuentre un texto dentro de otro texto
+        return prod.nombre.includes(textoFiltro);
+    });
+    dibujarTarjetas(prodFiltrados);
+});
