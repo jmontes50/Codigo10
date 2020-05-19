@@ -6,8 +6,8 @@ app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'root'
 app.config['MYSQL_DB'] = 'playasCodigo10'
-app.config['MYSQL_PORT']= '3306'
-
+app.config['MYSQL_PORT']= 3306
+ 
 mysql = MySQL(app)
 
 @app.before_first_request
