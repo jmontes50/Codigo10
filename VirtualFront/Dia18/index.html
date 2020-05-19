@@ -20,8 +20,12 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" id="crearproducto">
-                        <i class="fas fa-carrot mr-1"></i>Crear Producto
+                    <a 
+                        class="nav-link" 
+                        id="crearproducto"
+                    >
+                        <i class="fas fa-carrot mr-1"></i>
+                        Crear Producto
                     </a>
                 </li>
                 <li class="nav-item">
@@ -45,7 +49,37 @@
         </div>
     </main>
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="modalproducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Crear Producto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <!-- cuerpo del modal -->
+              <form id="formulario">
+                  <div class="form-group">
+                      <label>Nombre:</label>
+                      <input type="text" class="form-control" placeholder="Ingrese el nombre" name="nombre">
+                  </div>
+                  <div class="form-group">
+                    <label>Descripción:</label>
+                    <input type="text" class="form-control" placeholder="Ingrese la descripcion" name="descripcion">
+                </div>
+                <div class="form-group">
+                    <label>Precio:</label>
+                    <input type="number" min="0" class="form-control" placeholder="Ingrese el Precio" name="precio">
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Crear Producto</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
