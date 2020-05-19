@@ -41,6 +41,65 @@ class Usuario(Resource):
         return {'message': 'Usuario creado exitosamente'}, 201
 
 
+# TRAER TODOS LOS CLIENTES Y TRAER UN SOLO CLIENTE POR SU CORREO Y AGREGAR UN CLIENTE NUEVO
+class Cliente(Resource):
+    def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument(
+            'nombre',
+            type=str,
+            required=True,
+            help='Falta el nombre'
+            )
+        parser.add_argument(
+            'apellido',
+            type=str,
+            required=True,
+            help='Falta el apellido'
+            )
+        parser.add_argument(
+            'correo',
+            type=str,
+            required=True,
+            help='Falta el correo'
+            )
+        data = parser.parse_args()
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO T_CLIENTE (cliente_nom, cliente_ape, cliente_email) values (%s,%s,%s)",(data['nombre'],data['apellido'],data['correo']))
+        mysql.connection.commit()
+        cur.close()
+        return {
+            'message':'Cliente creado exitosamente'
+        }, 201
+    def get(self):
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM T_CLIENTE")
+        respuesta = cur.fetchall()
+        cur.close()
+        respuestaMejorada=[]
+        for cliente in respuesta:
+            diccionariocliente={
+                'id':cliente[0],
+                'nombre':cliente[1],
+                'apellido':cliente[2],
+                'correo':cliente[3]
+            }
+            respuestaMejorada.append(diccionariocliente)
+            print(cliente)
+        # print(respuesta)
+        return {
+            'respuesta':respuesta,
+            'respuestaMejorada':respuestaMejorada
+        }
+    def options(self,correo):
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM T_CLIENTE WHERE CLIENTE_EMAIL=%s",(correo,))
+        respuesta = cur.fetchone()
+        cur.close
+        print(respuesta)
+        # SI EXISTE EL USUARIO QUE ME LO MUESTRE Y SI NO QUE INDIQUE QUE NO EXISTE ESE USUARIO CON ESE CORREO
+
+
 class Login(Resource):
     def post(self):
         parser = reqparse.RequestParser()
@@ -83,6 +142,7 @@ class Login(Resource):
 
 api.add_resource(Usuario, '/registrar')
 api.add_resource(Login,'/login')
+api.add_resource(Cliente, '/cliente','/cliente/<string:correo>')
 
 
 @app.route('/')
