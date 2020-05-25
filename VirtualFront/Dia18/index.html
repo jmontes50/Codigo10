@@ -10,81 +10,139 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-      <!-- navbar inicia -->
+    <!-- navbar inicia -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand">Tiendita App</a>
+      <a class="navbar-brand">Tiendita App</a>
 
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a 
-                        class="nav-link" 
-                        id="crearproducto"
-                    >
-                        <i class="fas fa-carrot mr-1"></i>
-                        Crear Producto
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="vercarrito">
-                        <i class="fas fa-shopping-cart mr-1"></i>Ver mi Carrito
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="crearproducto">
+              <i class="fas fa-carrot mr-1"></i>
+              Crear Producto
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="vercarrito">
+              <i class="fas fa-shopping-cart mr-1"></i>Ver mi Carrito
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <!-- navbar finaliza -->
 
     <!-- container -->
     <main class="container mt-3">
-        <h1>Productos Disponibles!</h1>
-        <small class="text-secondary font-weight-bold">Compre casero, los mejores del mercado mejor que la chacra :D</small>
-        <div class="row" id="contenido">
-            <!-- lo voy a utilizar en JS -->
-                
-            <!-- :::: -->
-        </div>
+      <h1>Productos Disponibles!</h1>
+      <small class="text-secondary font-weight-bold"
+        >Compre casero, los mejores del mercado mejor que la chacra :D</small
+      >
+      <div class="row" id="contenido">
+        <!-- lo voy a utilizar en JS -->
+
+        <!-- :::: -->
+      </div>
     </main>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalproducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Crear Producto</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+    <div
+      class="modal fade"
+      id="modalproducto"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Crear Producto</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- cuerpo del modal -->
+            <form id="formulario">
+              <div class="form-group">
+                <label>Nombre:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ingrese el nombre"
+                  name="nombre"
+                />
+              </div>
+              <div class="form-group">
+                <label>Descripción:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ingrese la descripcion"
+                  name="descripcion"
+                />
+              </div>
+              <div class="form-group">
+                <label>Precio:</label>
+                <input
+                  type="number"
+                  min="0"
+                  class="form-control"
+                  placeholder="Ingrese el Precio"
+                  name="precio"
+                />
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">
+                Crear Producto
               </button>
-            </div>
-            <div class="modal-body">
-                <!-- cuerpo del modal -->
-              <form id="formulario">
-                  <div class="form-group">
-                      <label>Nombre:</label>
-                      <input type="text" class="form-control" placeholder="Ingrese el nombre" name="nombre">
-                  </div>
-                  <div class="form-group">
-                    <label>Descripción:</label>
-                    <input type="text" class="form-control" placeholder="Ingrese la descripcion" name="descripcion">
-                </div>
-                <div class="form-group">
-                    <label>Precio:</label>
-                    <input type="number" min="0" class="form-control" placeholder="Ingrese el Precio" name="precio">
-                </div>
-                <button class="btn btn-primary btn-block" type="submit">Crear Producto</button>
-              </form>
-            </div>
+            </form>
           </div>
         </div>
       </div>
+    </div>
 
-
-
-
-
+    <!-- MODALCARRITO -->
+    <div
+      class="modal fade"
+      id="modalcarrito"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="bodycarrito">
+            <!-- cuerpo del modal -->
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- JS -->
     <script

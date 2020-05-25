@@ -3,6 +3,8 @@ window.onload = ()=> {
     let contenido = document.getElementById("contenido");
     let linkModal = document.getElementById("crearproducto");
     let formulario = document.getElementById("formulario");
+    let vercarrito = document.getElementById("vercarrito");
+    let bodycarrito = document.getElementById("bodycarrito");
 
     let imprimirProductos = (arrProductos) => {
         contenido.innerHTML = "";
@@ -41,13 +43,48 @@ window.onload = ()=> {
 
         //recorremos ese arreglo de botones
          for(let i = 0; i<btnsCarrito.length; i++){
+             //un evento onclick por cada botón que tengo en mi arreglo de botones
              btnsCarrito[i].onclick = (e) => {
                 //  e.target va a hacer referencia al mismo objeto que estoy referenciando
-                console.log(e.target)
-                 console.log(e.target.getAttribute("nombre"));
-                 console.log(e.target.getAttribute("precio"));
+                // console.log(e.target)
+                //creo un objeto para mi producto
+                let objProd = {
+                    nombre:e.target.getAttribute("nombre"),
+                    precio:e.target.getAttribute("precio")
+                }
+                //ese objeto lo convierto a texto
+
+                //reviso si existe "carrito" en el localStorage
+                if(localStorage.getItem("carrito") === null){
+                    let arrProd = [objProd];
+                    let JSONarrProd = JSON.stringify(arrProd);
+                    localStorage.setItem("carrito",JSONarrProd);
+                }else{ //aca ya tengo mi carrito en el localStorage
+                    let carrito = localStorage.getItem("carrito");
+                    let JSONcarrito = JSON.parse(carrito);
+                    JSONcarrito.push(objProd); //JS
+                    localStorage.setItem("carrito", JSON.stringify(JSONcarrito));
+                }
+
              }
          }      
+    }
+
+    let imprimirCarrito = () => {
+        let carrito = localStorage.getItem("carrito");
+        let JSONcarrito = JSON.parse(carrito);
+        let tabla = document.createElement("table");
+        tabla.setAttribute("class","table");
+        let tr = '';
+        JSONcarrito.forEach((prod) => {
+            tr = tr + `<tr>
+                            <td>${prod.nombre}</td>
+                            <td>${prod.precio}</td>
+                        </tr>`
+        });
+        tabla.innerHTML = tr;
+        bodycarrito.innerHTML = "";
+        bodycarrito.appendChild(tabla);
     }
 
     let traerProductos = () => {
@@ -109,5 +146,11 @@ window.onload = ()=> {
     linkModal.onclick = () => {
         //$ = document.querySelector
         $("#modalproducto").modal("show");
+    }
+
+    //CODIGO PARA MOSTRAR EL CARRITO
+    vercarrito.onclick = () => {
+        $("#modalcarrito").modal("show");
+        imprimirCarrito();
     }
 }
