@@ -17,4 +17,4 @@ let objPerro = {
     personalidad:"Dramático"
 }
 
-console.log("Perro: ",objPerro)
+console.log("Perro: ",objPerro);
