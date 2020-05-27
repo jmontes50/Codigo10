@@ -4,8 +4,8 @@ from flask_cors import CORS
 from base_de_datos import bd
 
 from models.empresa import EmpresaModel
-from controllers.departamento import DepartamentoController
-from models.distrito import DistritoModel
+from controllers.departamento import DepartamentoController, DepartamentosController
+from controllers.distrito import DistritoController
 
 app = Flask(__name__)
 CORS(app, methods=['GET','POST'],origins=['http://127.0.0.0.1:3000','http://www.goOgle.com'])
@@ -26,8 +26,9 @@ def iniciar_bd():
     bd.create_all(app=app)
 
 # RUTAS
+api.add_resource(DepartamentosController, '/departamento')
 api.add_resource(DepartamentoController,'/departamento','/departamento/<int:id>')
-
+api.add_resource(DistritoController,'/distrito','/distrito/<int:id>')
 
 if __name__=="__main__":
     app.run(debug=True)

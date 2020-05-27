@@ -34,7 +34,6 @@ class DepartamentoController(Resource):
         # .limit(n) => trae los n primeras coincidencias
         # .all() => devuelve todas las coincidencias
         # NOTA todos devuelven en LISTAS excepto el first que devuelve un solo objeto
-        print(resultado)
         if resultado:
             return {
                 'ok': True,
@@ -66,4 +65,21 @@ class DepartamentoController(Resource):
             return{
                 'ok':False,
                 'message':'No existe el departamento a actualizar'
+            },404
+
+class DepartamentosController(Resource):
+    def get(self):
+        resultado = DepartamentoModel.query.all()
+        if resultado:
+            listResultado=[]
+            for departamento in resultado:
+                listResultado.append(departamento.retornarJson())
+            return {
+                'ok': True,
+                'content': listResultado
+            }
+        else:
+            return {
+                'ok':True,
+                'message': 'No hay departamentos disponibles'
             },404

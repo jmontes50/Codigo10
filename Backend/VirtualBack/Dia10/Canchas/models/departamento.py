@@ -6,6 +6,7 @@ class DepartamentoModel(bd.Model):
     descripcion = bd.Column('dep_desc',bd.String(45), unique=True)
 
     # ESTO NO CREA UNA RELACION 
+    # REVERSE RELATIONS 
     distritos = bd.relationship('DistritoModel', backref='distrito')
     # https://flask-sqlalchemy.palletsprojects.com/en/2.x/models/#one-to-many-relationships
     # el parametro lazy puede admitir distintos valores
@@ -21,9 +22,13 @@ class DepartamentoModel(bd.Model):
         return 'id:{} nombre:{}'.format(self.id,self.descripcion)
     
     def retornarJson(self):
+        listDistritos=[]
+        for distrito in self.distritos:
+            listDistritos.append(distrito.retornarJson())
         return {
             'id': self.id,
-            'nombre':self.descripcion
+            'nombre':self.descripcion,
+            'distritos':listDistritos
         }
 
     def guardar(self):
